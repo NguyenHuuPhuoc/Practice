@@ -18,9 +18,6 @@ namespace Algorithm.Permutations.Implement
             int totalElementFirst = arrayFirst.Length;
             int totalElementSecond = arraySecond.Length;
 
-            if (totalElementFirst != totalElementSecond)
-                return false;
-
             // Check array permutation
             for (int i = 0; i < totalElementFirst; i++)
             {
@@ -30,8 +27,6 @@ namespace Algorithm.Permutations.Implement
                     if (count == totalElementFirst)
                         return false;
                 }
-                else
-                    return true;
             }
 
             Array.Sort(arrayFirst);
