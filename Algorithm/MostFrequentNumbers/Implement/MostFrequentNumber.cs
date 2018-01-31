@@ -81,7 +81,7 @@ namespace Algorithm.MostFrequentNumbers.Implement
         public void MainMostFrequentNumber()
         {
             Console.Write("\t");
-            Console.Write("******Question 2******\n\t");
+            Console.Write("******Question 2******\n");
             Console.Write("Nhap so phan tu cua mang: ");
             int totalElement = int.Parse(Console.ReadLine());
 
