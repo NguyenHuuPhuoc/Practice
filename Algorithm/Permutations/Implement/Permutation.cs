@@ -18,6 +18,8 @@ namespace Algorithm.Permutations.Implement
             int totalElementFirst = arrayFirst.Length;
             int totalElementSecond = arraySecond.Length;
 
+            if (totalElementFirst != totalElementSecond)
+                return false;
             // Check array permutation
             for (int i = 0; i < totalElementFirst; i++)
             {
@@ -50,13 +52,13 @@ namespace Algorithm.Permutations.Implement
             Console.Write("Nhap so phan tu cua mang thu nhat : ");
             int totalElementFirst = int.Parse(Console.ReadLine());
 
-            int[] arrayFirst = new int[100];
+            int[] arrayFirst = new int[totalElementFirst];
             InputArrray(arrayFirst, totalElementFirst);
             OutputArray(arrayFirst, totalElementFirst);
 
             Console.Write("Nhap so phan tu cua mang thu hai :");
             int totalElementSecond = int.Parse(Console.ReadLine());
-            int[] arraySecond = new int[100];
+            int[] arraySecond = new int[totalElementSecond];
             InputArrray(arraySecond, totalElementSecond);
             OutputArray(arraySecond, totalElementSecond);
 
