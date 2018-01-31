@@ -20,6 +20,7 @@ namespace Algorithm.MostFrequentNumbers.Implement
                 {
                     if (array[i] == array[j])
                     {
+
                         return false;
                     }
                 }

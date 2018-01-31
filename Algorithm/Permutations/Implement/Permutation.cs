@@ -14,6 +14,7 @@ namespace Algorithm.Permutations.Implement
         /// <returns></returns>
         public bool BusinessLogic(int[] arrayFirst, int[] arraySecond)
         {
+            int count = 0;
             int totalElementFirst = arrayFirst.Length;
             int totalElementSecond = arraySecond.Length;
 
@@ -24,7 +25,11 @@ namespace Algorithm.Permutations.Implement
             for (int i = 0; i < totalElementFirst; i++)
             {
                 if (arrayFirst[i] == arraySecond[i])
-                    return false;
+                {
+                    count++;
+                    if (count == totalElementFirst)
+                        return false;
+                }
                 else
                     return true;
             }
