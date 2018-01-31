@@ -12,8 +12,8 @@ namespace Algorithm
         /// <param name="args"></param>
         public static void Main(string[] args)
         {
-            //MostFrequentNumber mostFrequentNumber = new MostFrequentNumber();
-            //mostFrequentNumber.MainMostFrequentNumber();
+            MostFrequentNumber mostFrequentNumber = new MostFrequentNumber();
+            mostFrequentNumber.MainMostFrequentNumber();
 
             Permutation permutation = new Permutation();
             permutation.MainPermutation();

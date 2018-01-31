@@ -12,7 +12,7 @@ namespace Algorithm.MostFrequentNumbers.Implement
         /// <param name="array"></param>
         /// <param name="totalElement"></param>
         /// <returns></returns>
-        public Boolean CheckElementDuplicate(int[] array, int totalElement)
+        public bool CheckElementDuplicate(int[] array, int totalElement)
         {
             for (int i = 0; i < totalElement; i++)
             {
@@ -29,14 +29,23 @@ namespace Algorithm.MostFrequentNumbers.Implement
 
         /// <summary>
         /// Business
+        /// if(CheckElementDuplicate ==true)
+        /// {
+        ///     Output: max element duplicate in array
+        /// }
+        /// else
+        /// {
+        ///     Output: max element in array
+        /// }
         /// </summary>
         /// <param name="array"></param>
         /// <param name="totalElement"></param>
         public void BusinessLogic(int[] array, int totalElement)
         {
+            int max = array[0];
+
             if (CheckElementDuplicate(array, totalElement))
             {
-                int max = array[0];
                 for (int i = 0; i < totalElement; i++)
                 {
                     if (array[i] > max)
@@ -48,16 +57,20 @@ namespace Algorithm.MostFrequentNumbers.Implement
             }
             else
             {
-                int max = array[0], result = 0;
                 for (int i = 1; i < totalElement; i++)
                 {
-                    if (array[i] > max)
+                    for (int j = i + 1; j < totalElement; j++)
                     {
-                        max = array[i];
-                        result = i;
+                        if (array[i] == array[j])
+                        {
+                            if (array[i] > max)
+                            {
+                                max = array[i];
+                            }
+                        }
                     }
                 }
-                Console.Write("Ouput: {0}", result);
+                Console.Write("Ouput: {0}", max);
             }
         }
 

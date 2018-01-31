@@ -12,13 +12,22 @@ namespace Algorithm.Permutations.Implement
         /// <param name="arrayFirst"></param>
         /// <param name="arraySecond"></param>
         /// <returns></returns>
-        public Boolean BusinessLogic(int[] arrayFirst, int[] arraySecond)
+        public bool BusinessLogic(int[] arrayFirst, int[] arraySecond)
         {
             int totalElementFirst = arrayFirst.Length;
             int totalElementSecond = arraySecond.Length;
 
             if (totalElementFirst != totalElementSecond)
                 return false;
+
+            // Check array permutation
+            for (int i = 0; i < totalElementFirst; i++)
+            {
+                if (arrayFirst[i] == arraySecond[i])
+                    return false;
+                else
+                    return true;
+            }
 
             Array.Sort(arrayFirst);
             Array.Sort(arraySecond);

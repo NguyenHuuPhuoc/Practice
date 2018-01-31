@@ -10,7 +10,7 @@ namespace Algorithm.Permutations.Interface
         /// <param name="arrayFirst"></param>
         /// <param name="arraySecond"></param>
         /// <returns></returns>
-        Boolean BusinessLogic(int[] arrayFirst, int[] arraySecond);
+        bool BusinessLogic(int[] arrayFirst, int[] arraySecond);
 
         /// <summary>
         /// Main of Permutation

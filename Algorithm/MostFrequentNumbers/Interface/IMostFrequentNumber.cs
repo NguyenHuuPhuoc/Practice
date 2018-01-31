@@ -10,7 +10,7 @@ namespace Algorithm.MostFrequentNumbers.Interface
         /// <param name="array"></param>
         /// <param name="totalElement"></param>
         /// <returns></returns>
-        Boolean CheckElementDuplicate(int[] array, int totalElement);
+        bool CheckElementDuplicate(int[] array, int totalElement);
 
         /// <summary>
         /// Business
