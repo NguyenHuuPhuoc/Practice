@@ -1,5 +1,4 @@
 ﻿using Algorithm.MostFrequentNumbers.Implement;
-using Algorithm.Permutations;
 using Algorithm.Permutations.Implement;
 
 namespace Algorithm
@@ -12,11 +11,11 @@ namespace Algorithm
         /// <param name="args"></param>
         public static void Main(string[] args)
         {
-            MostFrequentNumber mostFrequentNumber = new MostFrequentNumber();
-            mostFrequentNumber.MainMostFrequentNumber();
-
             Permutation permutation = new Permutation();
             permutation.MainPermutation();
+
+            MostFrequentNumber mostFrequentNumber = new MostFrequentNumber();
+            mostFrequentNumber.MainMostFrequentNumber();
         }
     }
 }

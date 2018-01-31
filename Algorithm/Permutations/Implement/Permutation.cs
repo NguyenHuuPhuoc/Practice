@@ -45,6 +45,8 @@ namespace Algorithm.Permutations.Implement
         /// </summary>
         public void MainPermutation()
         {
+            Console.Write("\t");
+            Console.Write("******Question 1****** \n");
             Console.Write("Nhap so phan tu cua mang thu nhat : ");
             int totalElementFirst = int.Parse(Console.ReadLine());
 
