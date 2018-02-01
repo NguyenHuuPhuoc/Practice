@@ -17,6 +17,7 @@
         /// <param name="totalElement"></param>
         /// <returns></returns>
         int MaxElementDuplicate(int[] array, int totalElement);
+
         /// <summary>
 
         /// CheckElementDuplicate: check element duplicate in array
@@ -24,7 +25,7 @@
         /// <param name="array"></param>
         /// <param name="totalElement"></param>
         /// <returns></returns>
-        //bool CheckElementDuplicate(int[] array, int totalElement);
+        bool CheckElementDuplicate(int[] array, int totalElement);
 
         /// <summary>
         /// Business
