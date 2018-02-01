@@ -57,20 +57,48 @@ namespace Algorithm.MostFrequentNumbers.Implement
         public int MaxElementDuplicate(int[] array, int totalElement)
         {
             max = array[0];
-            for (int i = 1; i < totalElement; i++)
+            int count = 1;
+            int tempCount;
+            int temp = 0;
+            for (int i = 0; i < totalElement; i++)
             {
+                temp = array[i];
+                tempCount = 0;
                 for (int j = i + 1; j < totalElement; j++)
                 {
                     if (array[i] == array[j])
-                    {
-                        if (array[i] > max)
-                        {
-                            max = array[i];
-                        }
-                    }
+                        tempCount++;
+                }
+                if (tempCount > count)
+                {
+                    max = temp;
+                    count = tempCount;
                 }
             }
             return max;
+        }
+
+        public int getPopularElement(int[] a)
+        {
+            int count = 1, tempCount;
+            int popular = a[0];
+            int temp = 0;
+            for (int i = 0; i < (a.Length-1); i++)
+            {
+                temp = a[i];
+                tempCount = 0;
+                for (int j = 1; j < a.Length; j++)
+                {
+                    if (temp == a[j])
+                        tempCount++;
+                }
+                if (tempCount > count)
+                {
+                    popular = temp;
+                    count = tempCount;
+                }
+            }
+            return popular;
         }
 
         /// <summary>
@@ -115,6 +143,8 @@ namespace Algorithm.MostFrequentNumbers.Implement
             OutputArray(array, totalElement);
 
             BusinessLogic(array, totalElement);
+
+            Console.Write("demo: {0}", getPopularElement(array));
 
             Console.ReadKey();
         }
