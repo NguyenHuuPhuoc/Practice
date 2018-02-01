@@ -53,7 +53,6 @@ namespace Algorithm.MostFrequentNumbers.Implement
                         max = array[i];
                     }
                 }
-                Console.Write("Ouput: {0}", max);
             }
             else
             {
@@ -70,8 +69,8 @@ namespace Algorithm.MostFrequentNumbers.Implement
                         }
                     }
                 }
-                Console.Write("Ouput: {0}", max);
             }
+            Console.Write("Ouput: {0}", max);
         }
 
         /// <summary>
