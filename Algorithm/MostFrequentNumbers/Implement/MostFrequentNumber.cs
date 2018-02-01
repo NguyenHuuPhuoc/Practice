@@ -6,6 +6,8 @@ namespace Algorithm.MostFrequentNumbers.Implement
 {
     public class MostFrequentNumber : Common, IMostFrequentNumber
     {
+        private int max;
+
         /// <summary>
         /// CheckElementDuplicate: check element duplicate in array
         /// </summary>
@@ -28,6 +30,50 @@ namespace Algorithm.MostFrequentNumbers.Implement
         }
 
         /// <summary>
+        /// Max element in array
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="totalElement"></param>
+        /// <returns></returns>
+        public int MaxElement(int[] array, int totalElement)
+        {
+            max = array[0];
+            for (int i = 0; i < totalElement; i++)
+            {
+                if (array[i] > max)
+                {
+                    max = array[i];
+                }
+            }
+            return max;
+        }
+
+        /// <summary>
+        /// Max element duplicate in array
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="totalElement"></param>
+        /// <returns></returns>
+        public int MaxElementDuplicate(int[] array, int totalElement)
+        {
+            max = array[0];
+            for (int i = 1; i < totalElement; i++)
+            {
+                for (int j = i + 1; j < totalElement; j++)
+                {
+                    if (array[i] == array[j])
+                    {
+                        if (array[i] > max)
+                        {
+                            max = array[i];
+                        }
+                    }
+                }
+            }
+            return max;
+        }
+
+        /// <summary>
         /// Business
         /// if(CheckElementDuplicate ==true)
         /// {
@@ -46,31 +92,12 @@ namespace Algorithm.MostFrequentNumbers.Implement
 
             if (CheckElementDuplicate(array, totalElement))
             {
-                for (int i = 0; i < totalElement; i++)
-                {
-                    if (array[i] > max)
-                    {
-                        max = array[i];
-                    }
-                }
+                Console.Write("Ouput: {0}", MaxElement(array, totalElement));
             }
             else
             {
-                for (int i = 1; i < totalElement; i++)
-                {
-                    for (int j = i + 1; j < totalElement; j++)
-                    {
-                        if (array[i] == array[j])
-                        {
-                            if (array[i] > max)
-                            {
-                                max = array[i];
-                            }
-                        }
-                    }
-                }
+                Console.Write("Ouput: {0}", MaxElementDuplicate(array, totalElement));
             }
-            Console.Write("Ouput: {0}", max);
         }
 
         /// <summary>
