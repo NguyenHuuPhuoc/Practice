@@ -84,7 +84,7 @@ namespace Algorithm.MostFrequentNumbers.Implement
             Console.Write("Nhap so phan tu cua mang: ");
             int totalElement = int.Parse(Console.ReadLine());
 
-            int[] array = new int[100];
+            int[] array = new int[totalElement];
             InputArrray(array, totalElement);
             OutputArray(array, totalElement);
 
